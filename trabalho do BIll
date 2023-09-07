@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int opcao;
+    printf("Escolha o programa a ser executado:\n");
+    printf("1 - Média de notas\n");
+    printf("2 - Consumo médio de combustível\n");
+    printf("3 - Código ASCII de um caractere\n");
+    printf("4 - Conversão de Fahrenheit para Celsius\n");
+    printf("5 - Hipotenusa de um triângulo retângulo\n");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1:
+            // Programa 1 - Média de notas
+            float nota1, nota2, media;
+            printf("Informe a primeira nota: ");
+            scanf("%f", &nota1);
+            printf("Informe a segunda nota: ");
+            scanf("%f", &nota2);
+            media = (nota1 + nota2) / 2;
+            printf("A média final é: %.2f\n", media);
+            break;
+
+        case 2:
+            // Programa 2 - Consumo médio de combustível
+            float distancia, litros, consumoMedio;
+            printf("Informe a distância percorrida (em km): ");
+            scanf("%f", &distancia);
+            printf("Informe o total de litros de combustível gasto: ");
+            scanf("%f", &litros);
+            consumoMedio = distancia / litros;
+            printf("O consumo médio é: %.2f km/l\n", consumoMedio);
+            break;
+
+        case 3:
+            // Programa 3 - Código ASCII de um caractere
+            char caractere;
+            printf("Informe um caractere: ");
+            scanf(" %c", &caractere);
+            printf("Código ASCII em decimal: %d\n", caractere);
+            printf("Código ASCII em hexadecimal: %x\n", caractere);
+            break;
+
+        case 4:
+            // Programa 4 - Conversão de Fahrenheit para Celsius
+            float fahrenheit, celsius;
+            printf("Informe a temperatura em graus Fahrenheit: ");
+            scanf("%f", &fahrenheit);
+            celsius = (fahrenheit - 32) * 5 / 9;
+            printf("A temperatura em graus Celsius é: %.2f\n", celsius);
+            break;
+
+        case 5:
+            // Programa 5 - Hipotenusa de um triângulo retângulo
+            float cateto1, cateto2, hipotenusa;
+            printf("Informe o comprimento do primeiro cateto: ");
+            scanf("%f", &cateto1);
+            printf("Informe o comprimento do segundo cateto: ");
+            scanf("%f", &cateto2);
+            hipotenusa = sqrt(cateto1 * cateto1 + cateto2 * cateto2);
+            printf("O comprimento da hipotenusa é: %.2f\n", hipotenusa);
+            break;
+
+        default:
+            printf("Opção inválida.\n");
+            break;
+    }
+
+    return 0;
+}
